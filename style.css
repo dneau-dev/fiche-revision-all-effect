@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* --------------------------------- */
+/* Style du Menu (Grille) */
+/* --------------------------------- */
+
+.menu-fiches {
+    display: grid;
+    /* Crée une grille d'éléments qui s'ajustent. Chaque colonne fait minimum 250px. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Espacement entre les cartes */
+    max-width: 1200px;
+    margin: 0 auto; /* Centre la grille */
+}
+
+/* --------------------------------- */
+/* Style d'une Case Aperçu (Carte) */
+/* --------------------------------- */
+
+.case-apercu {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    text-decoration: none; /* Enlève le soulignement des liens */
+    color: inherit; /* Utilise la couleur de texte par défaut */
+    display: flex; /* Utilisation de Flexbox pour organiser le contenu interne */
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'effet de survol */
+}
+
+.case-apercu:hover {
+    transform: translateY(-5px); /* Remonte un peu la carte au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+    border-color: #007bff; /* Changement de couleur de bordure au survol */
+}
+
+.case-apercu h3 {
+    color: #007bff;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.case-apercu p {
+    font-size: 0.9em;
+    color: #555;
+    flex-grow: 1; /* Permet au paragraphe de prendre l'espace nécessaire */
+}
+
+.tag {
+    align-self: flex-start; /* Place le tag en bas à gauche */
+    background-color: #e0f7fa;
+    color: #007bff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 10px;
+}
